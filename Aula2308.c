@@ -1,7 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<stdio.h>
-#include<stdlib.h>
 typedef struct no{
 	int numero;
 	struct no *left, *right;
@@ -67,7 +65,7 @@ void imprimir(No *raiz){
 	}
 }
 
-
+/*
 void busca_profundidade(){
 	
 }
@@ -79,7 +77,7 @@ void criarpilha(){
 }
 void empilhar(){
 	
-}
+}*/
 int main(int argc, char** argv){
 	ArvoreBinaria arvore;
 	arvore.raiz=NULL;
