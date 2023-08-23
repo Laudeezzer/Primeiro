@@ -1,3 +1,4 @@
+//Por Bernardo Balão e Laudo David
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct no{
