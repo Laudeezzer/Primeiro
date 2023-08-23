@@ -66,10 +66,14 @@ void imprimir(No *raiz){
 	}
 }
 
-/*
-void busca_profundidade(){
-	
+void busca_profundidade(No* raiz){
+    if (raiz != NULL) {
+        busca_profundidade(raiz->left);
+        printf("%d ", raiz->numero);
+        busca_profundidade(raiz->right);
+    }
 }
+/*
 void busca_largura (){
 	
 }
