@@ -55,7 +55,7 @@ void inserir(ArvoreBinaria *arvore, int valor){
 		}
 	}
 }
-
+/*
 void imprimir(No *raiz){
 	if(raiz!=NULL){
 		printf("%d",raiz->numero);
@@ -65,15 +65,31 @@ void imprimir(No *raiz){
 		printf("\t");
 	}
 }
+*/
+void imprimir_elemento(int valor){
+	if(valor==-1){
+		printf("Arvore Vazia");
+	}else{
+	printf("%d",valor);
+}
 
-void busca_profundidade(No* raiz){
+int busca_normal(No* raiz,int valor){
     if (raiz != NULL) {
-        busca_profundidade(raiz->left);
-        printf("%d ", raiz->numero);
-        busca_profundidade(raiz->right);
-    }
+	    if(raiz->numero == valor){
+		    return raiz->numero;
+	    }
+	    else{
+		    if(valor<=raiz->numero){
+			    return buscar_normal(raiz->left,valor);
+		    }else(
+			    return buscar_normal(raiz->right,valor);			    
+    }else{
+	    return -1;
 }
 /*
+void busca_profundidade (){
+	
+}
 void busca_largura (){
 	
 }
@@ -106,6 +122,7 @@ int main(int argc, char** argv){
 	inserir(&arvore,8);
 	inserir(&arvore,51);
 	inserir(&arvore,10);
-	imprimir(arvore.raiz);
+	//imprimir(arvore.raiz);
+	busca_profundidade(arvore.raiz);
 	return 0;
 }
